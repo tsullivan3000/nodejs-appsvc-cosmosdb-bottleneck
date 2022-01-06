@@ -32,7 +32,7 @@ jobs:
         uses: azure/login@v1
         continue-on-error: false
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.ARM_DEPLOY_SERVICE_PRINCIPLE_CREDS }}
         
       - name: 'Azure Load Testing'
         uses: azure/load-testing@v1
