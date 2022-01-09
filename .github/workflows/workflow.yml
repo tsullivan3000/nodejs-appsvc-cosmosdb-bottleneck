@@ -3,7 +3,9 @@
 name: Azure Load Test
 
 # Controls when the workflow will run
-
+on:
+  workflow_dispatch:
+  
 env:
   AZURE_WEBAPP_NAME: "tomssamplewebapp101"    # set this to your application's name
   LOAD_TEST_RESOURCE: "TransactionStateLoadTesting"
