@@ -1,5 +1,0 @@
-version: v0.1
-testName: TransactionStateLoadTesting
-testPlan: TransactionStateLoadTesting.jmx
-description: 'TransactionStateLoadTesting Test Run'
-engineInstances: 1
