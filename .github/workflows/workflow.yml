@@ -60,6 +60,7 @@ jobs:
     name: Load Test
     needs: build-and-deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout GitHub Actions 
         uses: actions/checkout@v2
@@ -76,8 +77,16 @@ jobs:
           loadTestConfigFile: 'SampleApp.yaml'
           loadTestResource: ${{ env.LOAD_TEST_RESOURCE }}
           resourceGroup: ${{ env.LOAD_TEST_RESOURCE_GROUP }}
-      
+          secrets: |
+            [
+                {
+                "name": "appToken",
+                "value": "${{ secrets.MY_SECRET }}"
+                }
+            ]
       - uses: actions/upload-artifact@v2
         with:
           name: loadTestResults
           path: ${{ github.workspace }}/loadTest
+
+      
