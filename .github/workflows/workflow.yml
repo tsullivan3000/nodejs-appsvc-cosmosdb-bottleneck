@@ -84,13 +84,6 @@ jobs:
                 "value": "${{ secrets.MY_SECRET }}"
                 }
             ]
-          env: |
-            [
-               {
-               "name": "javax.net.ssl.keyStore",
-               "value": "myKeystore",
-               }
-            ]
       - uses: actions/upload-artifact@v2
         with:
           name: loadTestResults
