@@ -1,3 +1,4 @@
 {
-    "enableSecretsFeature": true
+    "enableSecretsFeature": true,
+    "-Djavax.net.ssl.keyStore": "mykeystore"
 }
